@@ -1,0 +1,42 @@
+# ==========================================
+# macOS (Operating System)
+# ==========================================
+# Finder folder metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Custom icons
+Icon?
+
+# Trash and mounted volume files
+.Trashes
+.Spotlight-V100
+.fseventsd
+
+# Apple metadata files
+._*
+
+# Temporary preview files
+.DocumentRevisions-V100
+.TemporaryItems
+
+# ==========================================
+# Visual Studio Code
+# ==========================================
+# Workspace local configuration
+.vscode/*
+
+# Optional exceptions for VS Code:
+# If you work in a team and want to share recommended extensions or tasks,
+# un-ignore specific workspace configuration files:
+! .vscode/settings.json
+! .vscode/tasks.json
+! .vscode/launch.json
+! .vscode/extensions.json
+
+# VS Code workspace files
+*.code-workspace
+
+# VS Code local history
+.history/
