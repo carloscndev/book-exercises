@@ -9,12 +9,35 @@ import Stack from './Stack.ts';
 function validParentheses(exp: string): number {
   const openParentheses = '(';
   const closeParentheses = ')';
-  let stack = new Stack();
-  let arrExp = exp.split('');
+  const stack = new Stack<number>();
 
-  for (let i=0; i<arrExp.length; i++) {
-    if (arrExp[i] === openParentheses) stack.push(arrExp[i]);
+  for (let i = 0; i < exp.length; i++) {
+    const char = exp[i];
+
+    if (char === openParentheses) {
+      stack.push(i); 
+    } else if (char === closeParentheses) {
+      if (stack.size() === 0) {
+        return i;
+      }
+      
+      stack.pop();
+    }
   }
-  
-  return 0;
-} 
+
+  if (stack.size() > 0) {
+    return stack.peek(); 
+  }
+
+  return -1;
+}
+
+// Examples 
+// exp: "(2+3"
+const r1 = validParentheses("(2+3");
+// exp: "(3*8) + (3 + 5)"
+const r2 = validParentheses(" (3*8)+(3+5)");
+// exp: "(2+3) + 2 + 4)"
+const r3 = validParentheses("(2+3)+2+4)");
+
+console.log('r1: ', r1, 'r2: ', r2, 'r3: ', r3);

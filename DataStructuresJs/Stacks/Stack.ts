@@ -13,8 +13,8 @@ class Stack<T> {
     return this.dataStore[this.dataStore.length - 1];
   }
 
-  pop() {
-    this.dataStore.pop();
+  pop(): T | undefined {
+    return this.dataStore.pop();
   }
 
   clear() {
