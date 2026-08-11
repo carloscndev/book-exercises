@@ -1,16 +1,24 @@
-class Queue<T> {
+class Deque<T> {
   private dataStore: T[];
 
   constructor() {
     this.dataStore = [];
   }
 
-  enqueue(element: T) {
+  pushBack(element: T): void {
     this.dataStore.push(element);
   }
 
-  dequeue(): T | undefined {
+  popFront(): T | undefined {
     return this.dataStore.shift();
+  }
+
+  pushFront(element: T): void {
+    this.dataStore.unshift(element);
+  }
+
+  popBack(): T | undefined {
+    return this.dataStore.pop();
   }
 
   front(): T {
@@ -30,8 +38,8 @@ class Queue<T> {
   }
 
   empty(): boolean {
-    return this.dataStore.length === 0 ? true : false;
+    return this.dataStore.length === 0;
   }
 }
 
-export default Queue;
+export default Deque;
