@@ -99,6 +99,14 @@ class CircularlyLinkedList<T> {
     }
     console.log([...this].join(' -> ') + ' -> (head)');
   }
+
+  getHeadNode(): LinkedListNode<T> {
+    return this.head;
+  }
+
+  getFirstNode(): LinkedListNode<T> {
+    return this.head.next;
+  }
 }
 
 export default CircularlyLinkedList;

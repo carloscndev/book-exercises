@@ -1,3 +1,6 @@
+/**
+ * Rewrite your solution to Example 4-6 using a doubly linked list.
+ */
 class DoublyLinkedListNode<T> {
   public element: T | null;
   public next: DoublyLinkedListNode<T> | null;
