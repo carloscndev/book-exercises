@@ -47,6 +47,10 @@ class Dictionary<T> {
     this.dataStore = Object.create(null);
     this.size = 0;
   }
+
+  getKeys(): string[] {
+    return Object.keys(this.dataStore);
+  }
 }
 
 export default Dictionary;
