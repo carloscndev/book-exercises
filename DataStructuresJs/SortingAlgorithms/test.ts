@@ -1,0 +1,34 @@
+import CArray from './SortingAlgorithms.ts'
+
+console.log('-------Bubble Sort------');
+const arr = new CArray(10);
+console.log('Initial Array');
+arr.setData();
+arr.show();
+console.log('Sorting the Array');
+arr.bubbleSort();
+arr.show();
+console.log('------Selection Sort-------');
+const arr2 = new CArray(10);
+console.log('Initial Array');
+arr2.setData();
+arr2.show();
+console.log('Sorting the Array');
+arr2.selectionSort();
+arr2.show();
+console.log('------Merge Sort-------');
+const arr3 = new CArray(10);
+console.log('Initial Data');
+arr3.setData();
+arr3.show();
+console.log('Sorting the Array');
+arr3.mergeSort();
+arr3.show();
+console.log('-----Quick Sort-----');
+const arr4 = new CArray(10);
+console.log('Initial Data');
+arr4.setData();
+arr4.show();
+console.log('Sorting the Array');
+arr4.quickSort();
+arr4.show();
